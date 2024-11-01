@@ -32,6 +32,7 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2ImageCheckBox1 = new Guna.UI2.WinForms.Guna2ImageCheckBox();
             this.gunaTxtContraseña = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.gunaTxtUsuario = new Guna.UI2.WinForms.Guna2TextBox();
@@ -39,24 +40,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.panelContenedorLoginRegister = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2DragControl3 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panelContenedorTodo = new Guna.UI2.WinForms.Guna2Panel();
             this.pctBoxImagenLogin = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageCheckBox1 = new Guna.UI2.WinForms.Guna2ImageCheckBox();
+            this.panelContenedorLoginRegister = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2DragControl3 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Panel1.SuspendLayout();
-            this.panelContenedorLoginRegister.SuspendLayout();
             this.panelContenedorTodo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctBoxImagenLogin)).BeginInit();
+            this.panelContenedorLoginRegister.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // guna2ShadowForm1
-            // 
-            this.guna2ShadowForm1.BorderRadius = 6;
-            this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(202)))), ((int)(((byte)(255)))));
-            this.guna2ShadowForm1.TargetForm = this;
             // 
             // guna2Panel1
             // 
@@ -68,12 +63,31 @@
             this.guna2Panel1.Controls.Add(this.lblIniciarSesion);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
+            this.guna2Panel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(473, 694);
+            this.guna2Panel1.ShadowDecoration.BorderRadius = 30;
+            this.guna2Panel1.Size = new System.Drawing.Size(476, 699);
             this.guna2Panel1.TabIndex = 0;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
+            // 
+            // guna2ImageCheckBox1
+            // 
+            this.guna2ImageCheckBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ImageCheckBox1.CheckedState.Image = global::EstudioDB.Properties.Resources.visibility_24dp_5985E1_FILL0_wght400_GRAD0_opsz24;
+            this.guna2ImageCheckBox1.CheckedState.ImageSize = new System.Drawing.Size(32, 32);
+            this.guna2ImageCheckBox1.Image = global::EstudioDB.Properties.Resources.visibility_24dp_5985E1_FILL0_wght400_GRAD0_opsz24;
+            this.guna2ImageCheckBox1.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageCheckBox1.ImageRotate = 0F;
+            this.guna2ImageCheckBox1.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2ImageCheckBox1.IndicateFocus = true;
+            this.guna2ImageCheckBox1.Location = new System.Drawing.Point(359, 355);
+            this.guna2ImageCheckBox1.Name = "guna2ImageCheckBox1";
+            this.guna2ImageCheckBox1.Size = new System.Drawing.Size(35, 29);
+            this.guna2ImageCheckBox1.TabIndex = 8;
+            this.guna2ImageCheckBox1.UseTransparentBackground = true;
+            this.guna2ImageCheckBox1.CheckedChanged += new System.EventHandler(this.guna2ImageCheckBox1_CheckedChanged);
             // 
             // gunaTxtContraseña
             // 
@@ -120,6 +134,7 @@
             this.guna2Button1.Size = new System.Drawing.Size(331, 49);
             this.guna2Button1.TabIndex = 5;
             this.guna2Button1.Text = "Iniciar sesión";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // gunaTxtUsuario
             // 
@@ -165,7 +180,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(129)))), ((int)(((byte)(194)))));
-            this.label1.Location = new System.Drawing.Point(627, 765);
+            this.label1.Location = new System.Drawing.Point(614, 765);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 30);
             this.label1.TabIndex = 4;
@@ -178,7 +193,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.MediumTurquoise;
-            this.label2.Location = new System.Drawing.Point(403, 765);
+            this.label2.Location = new System.Drawing.Point(387, 765);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(197, 30);
             this.label2.TabIndex = 5;
@@ -190,33 +205,18 @@
             this.guna2DragControl1.TargetControl = this.panelContenedorTodo;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
-            // panelContenedorLoginRegister
-            // 
-            this.panelContenedorLoginRegister.AutoSize = true;
-            this.panelContenedorLoginRegister.Controls.Add(this.guna2Panel1);
-            this.panelContenedorLoginRegister.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelContenedorLoginRegister.Location = new System.Drawing.Point(784, 101);
-            this.panelContenedorLoginRegister.Name = "panelContenedorLoginRegister";
-            this.panelContenedorLoginRegister.Size = new System.Drawing.Size(473, 694);
-            this.panelContenedorLoginRegister.TabIndex = 9;
-            // 
-            // guna2DragControl3
-            // 
-            this.guna2DragControl3.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2DragControl3.TargetControl = this.pctBoxImagenLogin;
-            this.guna2DragControl3.UseTransparentDrag = true;
-            // 
             // panelContenedorTodo
             // 
-            this.panelContenedorTodo.Controls.Add(this.pctBoxImagenLogin);
-            this.panelContenedorTodo.Controls.Add(this.guna2ImageButton2);
-            this.panelContenedorTodo.Controls.Add(this.panelContenedorLoginRegister);
             this.panelContenedorTodo.Controls.Add(this.guna2ImageButton1);
+            this.panelContenedorTodo.Controls.Add(this.guna2ImageButton2);
             this.panelContenedorTodo.Controls.Add(this.label1);
             this.panelContenedorTodo.Controls.Add(this.label2);
+            this.panelContenedorTodo.Controls.Add(this.pctBoxImagenLogin);
+            this.panelContenedorTodo.Controls.Add(this.panelContenedorLoginRegister);
             this.panelContenedorTodo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedorTodo.Location = new System.Drawing.Point(0, 0);
             this.panelContenedorTodo.Name = "panelContenedorTodo";
+            this.panelContenedorTodo.ShadowDecoration.BorderRadius = 30;
             this.panelContenedorTodo.Size = new System.Drawing.Size(1299, 853);
             this.panelContenedorTodo.TabIndex = 10;
             // 
@@ -225,10 +225,10 @@
             this.pctBoxImagenLogin.BackColor = System.Drawing.Color.Transparent;
             this.pctBoxImagenLogin.Image = global::EstudioDB.Properties.Resources.nws_sept_2_29_Photoroom;
             this.pctBoxImagenLogin.ImageRotate = 0F;
-            this.pctBoxImagenLogin.Location = new System.Drawing.Point(38, 141);
+            this.pctBoxImagenLogin.Location = new System.Drawing.Point(34, 138);
             this.pctBoxImagenLogin.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pctBoxImagenLogin.Name = "pctBoxImagenLogin";
-            this.pctBoxImagenLogin.Size = new System.Drawing.Size(740, 619);
+            this.pctBoxImagenLogin.Size = new System.Drawing.Size(716, 589);
             this.pctBoxImagenLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pctBoxImagenLogin.TabIndex = 1;
             this.pctBoxImagenLogin.TabStop = false;
@@ -253,22 +253,19 @@
             this.guna2ImageButton2.TabIndex = 8;
             this.guna2ImageButton2.Click += new System.EventHandler(this.guna2ImageButton2_Click);
             // 
-            // guna2ImageCheckBox1
+            // panelContenedorLoginRegister
             // 
-            this.guna2ImageCheckBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ImageCheckBox1.CheckedState.Image = global::EstudioDB.Properties.Resources.visibility_24dp_5985E1_FILL0_wght400_GRAD0_opsz24;
-            this.guna2ImageCheckBox1.CheckedState.ImageSize = new System.Drawing.Size(32, 32);
-            this.guna2ImageCheckBox1.Image = global::EstudioDB.Properties.Resources.visibility_24dp_5985E1_FILL0_wght400_GRAD0_opsz24;
-            this.guna2ImageCheckBox1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageCheckBox1.ImageRotate = 0F;
-            this.guna2ImageCheckBox1.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2ImageCheckBox1.IndicateFocus = true;
-            this.guna2ImageCheckBox1.Location = new System.Drawing.Point(359, 355);
-            this.guna2ImageCheckBox1.Name = "guna2ImageCheckBox1";
-            this.guna2ImageCheckBox1.Size = new System.Drawing.Size(35, 29);
-            this.guna2ImageCheckBox1.TabIndex = 8;
-            this.guna2ImageCheckBox1.UseTransparentBackground = true;
-            this.guna2ImageCheckBox1.CheckedChanged += new System.EventHandler(this.guna2ImageCheckBox1_CheckedChanged);
+            this.panelContenedorLoginRegister.AutoSize = true;
+            this.panelContenedorLoginRegister.Controls.Add(this.guna2Panel1);
+            this.panelContenedorLoginRegister.FillColor = System.Drawing.Color.Transparent;
+            this.panelContenedorLoginRegister.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelContenedorLoginRegister.Location = new System.Drawing.Point(771, 82);
+            this.panelContenedorLoginRegister.Name = "panelContenedorLoginRegister";
+            this.panelContenedorLoginRegister.ShadowDecoration.BorderRadius = 30;
+            this.panelContenedorLoginRegister.ShadowDecoration.Color = System.Drawing.Color.Transparent;
+            this.panelContenedorLoginRegister.ShadowDecoration.Enabled = true;
+            this.panelContenedorLoginRegister.Size = new System.Drawing.Size(476, 699);
+            this.panelContenedorLoginRegister.TabIndex = 9;
             // 
             // guna2ImageButton1
             // 
@@ -286,6 +283,19 @@
             this.guna2ImageButton1.TabIndex = 7;
             this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
             // 
+            // guna2DragControl3
+            // 
+            this.guna2DragControl3.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl3.TargetControl = this.pctBoxImagenLogin;
+            this.guna2DragControl3.UseTransparentDrag = true;
+            // 
+            // guna2BorderlessForm1
+            // 
+            this.guna2BorderlessForm1.BorderRadius = 30;
+            this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -302,10 +312,10 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            this.panelContenedorLoginRegister.ResumeLayout(false);
             this.panelContenedorTodo.ResumeLayout(false);
             this.panelContenedorTodo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctBoxImagenLogin)).EndInit();
+            this.panelContenedorLoginRegister.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -330,6 +340,7 @@
         private Guna.UI2.WinForms.Guna2Panel panelContenedorLoginRegister;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl3;
         private Guna.UI2.WinForms.Guna2Panel panelContenedorTodo;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
     }
 }
 

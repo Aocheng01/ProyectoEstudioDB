@@ -78,7 +78,7 @@ namespace EstudioDB
             }
             
         }
-        private void AbrirFormEnPanel2(object formhija)
+        private void AbrirFormEnPanelTodo(object formhija)
         {
             if (this.panelContenedorTodo.Controls.Count > 0)
                 this.panelContenedorTodo.Controls.RemoveAt(0);
@@ -89,8 +89,12 @@ namespace EstudioDB
             this.panelContenedorTodo.Controls.Add(fh);
             this.panelContenedorTodo.Tag = fh;
             fh.Size = this.panelContenedorTodo.Size; // Ajuste manual del tamaño
+            fh.BringToFront();
+
             fh.Show();
         }
+
+
         private void label1_Click(object sender, EventArgs e)
         {
             AbrirFormEnPanel(new FrmRegister());
@@ -99,6 +103,11 @@ namespace EstudioDB
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanelTodo(new FrmAplicacionPrincipal());
         }
     }
 }

@@ -110,6 +110,12 @@
     <Compile Include="dto\Asignatura.cs" />
     <Compile Include="dto\SesionesEstudio.cs" />
     <Compile Include="dto\Usuarios.cs" />
+    <Compile Include="Forms\FrmAplicacionPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAplicacionPrincipal.Designer.cs">
+      <DependentUpon>FrmAplicacionPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FrmAplicacionPrincipal.resx">
+      <DependentUpon>FrmAplicacionPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
