@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EstudioDB.Forms;
 using Org.BouncyCastle.Asn1.X509;
 
 namespace EstudioDB
@@ -16,6 +17,19 @@ namespace EstudioDB
         public FrmLogin()
         {
             InitializeComponent();
+        }
+        private void AbrirFormEnPanel(object formhija)
+        {
+            if (this.panelContenedorLoginRegister.Controls.Count > 0)
+                this.panelContenedorLoginRegister.Controls.RemoveAt(0);
+
+            Form fh = formhija as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.panelContenedorLoginRegister.Controls.Add(fh);
+            this.panelContenedorLoginRegister.Tag = fh;
+            fh.Size = this.panelContenedorLoginRegister.Size; // Ajuste manual del tamaño
+            fh.Show();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -63,6 +77,28 @@ namespace EstudioDB
                 gunaTxtContraseña.PasswordChar = '*';
             }
             
+        }
+        private void AbrirFormEnPanel2(object formhija)
+        {
+            if (this.panelContenedorTodo.Controls.Count > 0)
+                this.panelContenedorTodo.Controls.RemoveAt(0);
+
+            Form fh = formhija as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.panelContenedorTodo.Controls.Add(fh);
+            this.panelContenedorTodo.Tag = fh;
+            fh.Size = this.panelContenedorTodo.Size; // Ajuste manual del tamaño
+            fh.Show();
+        }
+        private void label1_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new FrmRegister());
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
