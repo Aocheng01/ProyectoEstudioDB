@@ -34,10 +34,10 @@
             this.panelContenedorTodo = new Guna.UI2.WinForms.Guna2Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanelLateral = new System.Windows.Forms.TableLayoutPanel();
+            this.guna2ImageButton3 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2ImageButton3 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2PanelAplicaiones = new Guna.UI2.WinForms.Guna2Panel();
             this.panelContenedorTodo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -49,7 +49,6 @@
             // guna2BorderlessForm1
             // 
             this.guna2BorderlessForm1.AnimateWindow = true;
-            this.guna2BorderlessForm1.BorderRadius = 70;
             this.guna2BorderlessForm1.ContainerControl = this;
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
@@ -73,6 +72,7 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.IsSplitterFixed = true;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
             // 
@@ -84,7 +84,7 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.guna2Panel1);
+            this.splitContainer1.Panel2.Controls.Add(this.guna2PanelAplicaiones);
             this.splitContainer1.Size = new System.Drawing.Size(1299, 792);
             this.splitContainer1.SplitterDistance = 82;
             this.splitContainer1.TabIndex = 13;
@@ -116,6 +116,26 @@
             this.tableLayoutPanelLateral.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
             this.tableLayoutPanelLateral.Size = new System.Drawing.Size(82, 792);
             this.tableLayoutPanelLateral.TabIndex = 1;
+            // 
+            // guna2ImageButton3
+            // 
+            this.guna2ImageButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ImageButton3.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton3.HoverState.Image = global::EstudioDB.Properties.Resources.timer_30dp_5985E1_FILL0_wght400_GRAD0_opsz24;
+            this.guna2ImageButton3.HoverState.ImageSize = new System.Drawing.Size(32, 32);
+            this.guna2ImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton3.Image")));
+            this.guna2ImageButton3.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton3.ImageRotate = 0F;
+            this.guna2ImageButton3.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2ImageButton3.IndicateFocus = true;
+            this.guna2ImageButton3.Location = new System.Drawing.Point(3, 3);
+            this.guna2ImageButton3.Name = "guna2ImageButton3";
+            this.guna2ImageButton3.PressedState.Image = global::EstudioDB.Properties.Resources.timer_30dp_5985E1_FILL0_wght400_GRAD0_opsz24;
+            this.guna2ImageButton3.PressedState.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2ImageButton3.Size = new System.Drawing.Size(76, 58);
+            this.guna2ImageButton3.TabIndex = 2;
             // 
             // guna2ImageButton1
             // 
@@ -156,37 +176,18 @@
             this.guna2ImageButton2.Size = new System.Drawing.Size(76, 55);
             this.guna2ImageButton2.TabIndex = 1;
             // 
-            // guna2Panel1
+            // guna2PanelAplicaiones
             // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
-            this.guna2Panel1.CustomizableEdges.TopLeft = false;
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.ShadowDecoration.BorderRadius = 50;
-            this.guna2Panel1.ShadowDecoration.CustomizableEdges.TopLeft = false;
-            this.guna2Panel1.Size = new System.Drawing.Size(1213, 792);
-            this.guna2Panel1.TabIndex = 12;
-            // 
-            // guna2ImageButton3
-            // 
-            this.guna2ImageButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ImageButton3.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton3.HoverState.Image = global::EstudioDB.Properties.Resources.timer_30dp_5985E1_FILL0_wght400_GRAD0_opsz24;
-            this.guna2ImageButton3.HoverState.ImageSize = new System.Drawing.Size(32, 32);
-            this.guna2ImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton3.Image")));
-            this.guna2ImageButton3.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton3.ImageRotate = 0F;
-            this.guna2ImageButton3.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2ImageButton3.IndicateFocus = true;
-            this.guna2ImageButton3.Location = new System.Drawing.Point(3, 3);
-            this.guna2ImageButton3.Name = "guna2ImageButton3";
-            this.guna2ImageButton3.PressedState.Image = global::EstudioDB.Properties.Resources.data_usage_30dp_5985E1_FILL0_wght400_GRAD0_opsz24;
-            this.guna2ImageButton3.PressedState.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2ImageButton3.Size = new System.Drawing.Size(76, 58);
-            this.guna2ImageButton3.TabIndex = 2;
+            this.guna2PanelAplicaiones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
+            this.guna2PanelAplicaiones.CustomizableEdges.TopLeft = false;
+            this.guna2PanelAplicaiones.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2PanelAplicaiones.Location = new System.Drawing.Point(0, 0);
+            this.guna2PanelAplicaiones.Name = "guna2PanelAplicaiones";
+            this.guna2PanelAplicaiones.ShadowDecoration.BorderRadius = 50;
+            this.guna2PanelAplicaiones.ShadowDecoration.CustomizableEdges.TopLeft = false;
+            this.guna2PanelAplicaiones.Size = new System.Drawing.Size(1213, 792);
+            this.guna2PanelAplicaiones.TabIndex = 12;
+            this.guna2PanelAplicaiones.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2PanelAplicaiones_Paint);
             // 
             // FrmAplicacionPrincipal
             // 
@@ -215,7 +216,7 @@
 
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2Panel panelContenedorTodo;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel guna2PanelAplicaiones;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelLateral;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private System.Windows.Forms.SplitContainer splitContainer1;
