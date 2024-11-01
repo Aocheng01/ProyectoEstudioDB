@@ -34,6 +34,8 @@ namespace EstudioDB.Forms.FormsInicio
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            dAO
+
             iniciarSesion?.Invoke(this,EventArgs.Empty);
             this.Close();
         }

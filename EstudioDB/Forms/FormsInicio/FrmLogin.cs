@@ -21,25 +21,14 @@ namespace EstudioDB
      
 
         }
-        private void AbrirFormEnPanel(object formhija)
-        {
-            if (this.panelContenedorLoginRegister.Controls.Count > 0)
-                this.panelContenedorLoginRegister.Controls.RemoveAt(0);
 
-            Form fh = formhija as Form;
-            fh.TopLevel = false;
-            fh.Dock = DockStyle.Fill;
-            this.panelContenedorLoginRegister.Controls.Add(fh);
-            this.panelContenedorLoginRegister.Tag = fh;
-            fh.Size = this.panelContenedorLoginRegister.Size; // Ajuste manual del tamaño
-            fh.Show();
-        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             FrmIniciarSesion formIniciarSesion = new FrmIniciarSesion();
             formIniciarSesion.iniciarSesion += (s, ev) => AbrirFormEnPanelTodo(new FrmAplicacionPrincipal());
             AbrirFormEnPanel(formIniciarSesion);
+
         }
 
 
@@ -53,6 +42,20 @@ namespace EstudioDB
                 Application.Exit();
             }
    
+        }
+
+        private void AbrirFormEnPanel(object formhija)
+        {
+            if (this.panelContenedorLoginRegister.Controls.Count > 0)
+                this.panelContenedorLoginRegister.Controls.RemoveAt(0);
+
+            Form fh = formhija as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.panelContenedorLoginRegister.Controls.Add(fh);
+            this.panelContenedorLoginRegister.Tag = fh;
+            fh.Size = this.panelContenedorLoginRegister.Size; // Ajuste manual del tamaño
+            fh.Show();
         }
 
         private void guna2ImageButton2_Click(object sender, EventArgs e)
@@ -85,7 +88,14 @@ namespace EstudioDB
             if (this.panelContenedorLoginRegister.Controls.Count > 0)
                 this.panelContenedorLoginRegister.Controls.RemoveAt(0); // Limpia el panel
 
-            AbrirFormEnPanel(new FrmRegister());
+            // Crea una instancia de FrmRegister
+            FrmRegister frmRegister = new FrmRegister();
+
+            // Suscribe el evento CerrarRegistro para abrir FrmIniciarSesion al cerrarse FrmRegister
+            frmRegister.CerrarRegistro += (s, ev) => AbrirFormEnPanel(new FrmIniciarSesion());
+
+            // Abre FrmRegister en el panel
+            AbrirFormEnPanel(frmRegister);
         }
 
 

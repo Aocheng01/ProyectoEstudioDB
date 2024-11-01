@@ -14,6 +14,7 @@ namespace EstudioDB.Forms
 {
     public partial class FrmRegister : Form
     {
+        public event EventHandler CerrarRegistro;
         public FrmRegister()
         {
             InitializeComponent();
@@ -43,8 +44,9 @@ namespace EstudioDB.Forms
             {
                 DaoUsuario daoUsuario = new DaoUsuario();
                 Usuario usuario = new Usuario(gunaTxtUsuario.Text,gunaTxtContraseña.Text);
-
                 daoUsuario.insertarUsuario(usuario);
+
+                CerrarRegistro?.Invoke(this, EventArgs.Empty);
                 this.Close();
 
 
@@ -55,6 +57,7 @@ namespace EstudioDB.Forms
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            CerrarRegistro?.Invoke(this, EventArgs.Empty);
             this.Close();
 
         }
