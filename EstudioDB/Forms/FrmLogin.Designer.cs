@@ -131,7 +131,7 @@
             this.gunaTxtUsuario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.gunaTxtUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(129)))), ((int)(((byte)(194)))));
             this.gunaTxtUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.gunaTxtUsuario.Location = new System.Drawing.Point(74, 268);
+            this.gunaTxtUsuario.Location = new System.Drawing.Point(74, 269);
             this.gunaTxtUsuario.Name = "gunaTxtUsuario";
             this.gunaTxtUsuario.PasswordChar = '\0';
             this.gunaTxtUsuario.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(129)))), ((int)(((byte)(194)))));
