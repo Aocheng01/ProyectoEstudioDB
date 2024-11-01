@@ -29,7 +29,6 @@ namespace EstudioDB.dao
             {
                 conexion.ConnectionString = cadenaConexion;
                 conexion.Open();
-                MessageBox.Show("Se conectó a la base de datos");
             }
             catch (Exception ex)
             {

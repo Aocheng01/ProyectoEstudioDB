@@ -29,16 +29,24 @@ namespace EstudioDB.dao
                     objetoConexion.cerrarConexion();
                 }
             }
-            catch (Exception ex)
+            catch (MySqlException ex)
             {
-                MessageBox.Show("No se pudo registrar la proyecto." + ex.ToString());
+                if (ex.Number == 1062) // Código de error para duplicados
+                {
+                    MessageBox.Show("Ya existe una tarea con ese nombre. Por favor, elige otro nombre.");
+                }
+                else
+                {
+                    MessageBox.Show("Ocurrió un error al agregar la tarea: " + ex.Message);
+                }
 
             }
 
         }
 
-        public List<Proyecto> obtenerProyecto(List<Proyecto> listaProyecto)
+        public List<Proyecto> obtenerProyecto()
         {
+            List<Proyecto> listaProyecto = new List<Proyecto>();
             try
             {
                 string query = "SELECT * FROM proyecto";
@@ -91,14 +99,17 @@ namespace EstudioDB.dao
             }
         }
 
-        public void eliminarProyecto(int id, Proyecto proyecto)
+        public void eliminarProyecto(int id)
         {
             try
             {
-                string query = "DELETE FROM proyecto WHERE idProyecto=@idProyecto";
+                string query = "DELETE FROM proyecto WHERE proyectoID=@proyectoID";
                 Conexion objetoConexion = new Conexion();
                 MySqlCommand myCommand = new MySqlCommand(query, objetoConexion.establecerConexion());
-                myCommand.Parameters.AddWithValue("@idProyecto", id);
+                myCommand.Parameters.AddWithValue("@proyectoID", id);
+
+                myCommand.ExecuteNonQuery();
+                objetoConexion.cerrarConexion();
 
             }
             catch (Exception ex)

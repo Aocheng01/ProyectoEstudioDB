@@ -110,6 +110,12 @@
     <Compile Include="dto\Proyecto.cs" />
     <Compile Include="dto\Sesion.cs" />
     <Compile Include="dto\Usuario.cs" />
+    <Compile Include="Forms\FormsTimer\FrmAñadirTarea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormsTimer\FrmAñadirTarea.Designer.cs">
+      <DependentUpon>FrmAñadirTarea.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmAplicacionPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FormsTimer\FrmAñadirTarea.resx">
+      <DependentUpon>FrmAñadirTarea.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmAplicacionPrincipal.resx">
       <DependentUpon>FrmAplicacionPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,6 +168,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\EstudioDB.dao.DaoProyecto.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -214,5 +224,6 @@
   <ItemGroup>
     <None Include="Resources\timer_30dp_5985E1_FILL0_wght400_GRAD0_opsz24.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

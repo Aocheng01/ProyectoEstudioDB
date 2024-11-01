@@ -17,6 +17,11 @@ namespace EstudioDB.dto
             this.ProyectoId = proyectoID;
             this.NombreProyecto = nombreProyecto;
         }
+
+        public Proyecto(string nombreProyecto)
+        {
+            this.NombreProyecto= nombreProyecto;
+        }
     }
 
     
