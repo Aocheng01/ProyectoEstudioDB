@@ -103,13 +103,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="dao\DaoAsignatura.cs" />
+    <Compile Include="dao\DaoProyecto.cs" />
     <Compile Include="dao\Conexion.cs" />
-    <Compile Include="dao\DaoSesionEstudio.cs" />
+    <Compile Include="dao\DaoSesion.cs" />
     <Compile Include="dao\DaoUsuario.cs" />
-    <Compile Include="dto\Asignatura.cs" />
-    <Compile Include="dto\SesionesEstudio.cs" />
-    <Compile Include="dto\Usuarios.cs" />
+    <Compile Include="dto\Proyecto.cs" />
+    <Compile Include="dto\Sesion.cs" />
+    <Compile Include="dto\Usuario.cs" />
     <Compile Include="Forms\FrmAplicacionPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +186,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\close_45dp_5985E1_FILL0_wght400_GRAD0_opsz481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data_usage_45dp_5985E1_FILL0_wght400_GRAD0_opsz48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data_usage_30dp_5985E1_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data_usage_30dp_000000_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar_month_30dp_434343_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar_month_30dp_5985E1_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timer_30dp_5985E1_FILL0_wght400_GRAD0_opsz24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

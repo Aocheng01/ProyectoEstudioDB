@@ -9,49 +9,49 @@ using MySql.Data.MySqlClient;
 
 namespace EstudioDB.dao
 {
-    internal class DaoSesionEstudio
+    internal class DaoSesion
     {
-        public void insertarSsesionEstudio(SesionesEstudio sesionesEstudio)
+        public void insertarSesion(Sesion sesion)
         {
             try
             {
-                string query = "INSERT INTO sesionesEstudio (asignaturaID, usuarioID, duracion, fecha)" +
-                               "VALUES (@asignaturaID, @usuarioID, @duracion, @fecha)";
+                string query = "INSERT INTO sesion (proyectoID, usuarioID, duracion, fecha)" +
+                               "VALUES (@proyectoID, @usuarioID, @duracion, @fecha)";
                 Conexion objetoConexion = new Conexion();
                 MySqlCommand myCommand = new MySqlCommand(query, objetoConexion.establecerConexion());
-                myCommand.Parameters.AddWithValue("@asignaturaID", sesionesEstudio.asignaturaID);
-                myCommand.Parameters.AddWithValue("@usuarioID", sesionesEstudio.usuarioID);
-                myCommand.Parameters.AddWithValue("@duracion", sesionesEstudio.duracion);
-                myCommand.Parameters.AddWithValue("@fecha", sesionesEstudio.fecha);
+                myCommand.Parameters.AddWithValue("@proyectoID", sesion.asignaturaID);
+                myCommand.Parameters.AddWithValue("@usuarioID", sesion.usuarioID);
+                myCommand.Parameters.AddWithValue("@duracion", sesion.duracion);
+                myCommand.Parameters.AddWithValue("@fecha", sesion.fecha);
                 myCommand.ExecuteNonQuery();
-                MessageBox.Show("Sesión de estudio registrada correctamente.");
+                MessageBox.Show("Sesión de sesion registrada correctamente.");
                 objetoConexion.cerrarConexion();
             }
             catch (Exception e)
             {
-                MessageBox.Show("Error al insertar sesion de estudio" + e.ToString());
+                MessageBox.Show("Error al insertar sesion de sesion" + e.ToString());
             }
         }
 
-        public List<SesionesEstudio> obtenerSesionesEstudio()
+        public List<Sesion> obtenerSesion()
         {
-            List<SesionesEstudio> listaSesionesEstudio = new List<SesionesEstudio>();
+            List<Sesion> listaSesion = new List<Sesion>();
             try
             {
-                string query = "SELECT * FROM sesionesEstudio";
+                string query = "SELECT * FROM sesion";
                 Conexion objetoConexion = new Conexion();
                 MySqlCommand mySqlCommand = new MySqlCommand(query, objetoConexion.establecerConexion());
                 MySqlDataReader reader = mySqlCommand.ExecuteReader();
                 while (reader.Read())
                 {
-                    SesionesEstudio sesionEstudio = new SesionesEstudio(
+                    Sesion sesion = new Sesion(
                         reader.GetInt16(0),
                         reader.GetInt16(1),
                         reader.GetInt16(2),
                         reader.GetInt16(3),
                         reader.GetDateTime(4)
                     );
-                    listaSesionesEstudio.Add(sesionEstudio);
+                    listaSesion.Add(sesion);
                 }
 
                 reader.Close();
@@ -59,24 +59,24 @@ namespace EstudioDB.dao
             }
             catch (Exception e)
             {
-                MessageBox.Show("Error al obtener lista de sesiones de estudio" + e.ToString());
+                MessageBox.Show("Error al obtener lista de sesiones de sesion" + e.ToString());
             }
 
-            return listaSesionesEstudio;
+            return listaSesion;
         }
 
-        public void actualizarSesionEstudio(SesionesEstudio sesionesEstudio)
+        public void actualizarSesion(Sesion sesion)
         {
             try
             {
-                string query = "UPDATE sesionesEstudio set duracion = @duracion, fecha = @fecha WHERE id = @id";
+                string query = "UPDATE sesion set duracion = @duracion, fecha = @fecha WHERE id = @id";
                 Conexion objetoConexion = new Conexion();
                 MySqlCommand myCommand = new MySqlCommand(query, objetoConexion.establecerConexion());
-                myCommand.Parameters.AddWithValue("@duracion", sesionesEstudio.duracion);
-                myCommand.Parameters.AddWithValue("@fecha", sesionesEstudio.fecha);
-                myCommand.Parameters.AddWithValue("@id", sesionesEstudio.sesionID);
+                myCommand.Parameters.AddWithValue("@duracion", sesion.duracion);
+                myCommand.Parameters.AddWithValue("@fecha", sesion.fecha);
+                myCommand.Parameters.AddWithValue("@id", sesion.sesionID);
                 myCommand.ExecuteNonQuery();
-                MessageBox.Show("Sesión de estudio actualizada correctamente.");
+                MessageBox.Show("Sesión actualizada correctamente.");
                 objetoConexion.cerrarConexion();
             }
             catch (Exception e)
@@ -85,16 +85,16 @@ namespace EstudioDB.dao
             }
         }
 
-        public void eliminarSesionEstudio(int id, SesionesEstudio sesion)
+        public void eliminarSesion(int id, Sesion sesion)
         {
             try
             {
-                string query = "DELETE FROM sesionesEstudio WHERE id = @id";
+                string query = "DELETE FROM sesion WHERE id = @id";
                 Conexion objetoConexion = new Conexion();
                 MySqlCommand myCommand = new MySqlCommand(query, objetoConexion.establecerConexion());
                 myCommand.Parameters.AddWithValue("@id", id);
                 myCommand.ExecuteNonQuery();
-                MessageBox.Show("Sesión de estudio eliminada correctamente.");
+                MessageBox.Show("Sesión eliminada correctamente.");
                 objetoConexion.cerrarConexion();
             }
             catch (Exception e)

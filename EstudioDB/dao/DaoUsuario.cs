@@ -11,11 +11,11 @@ namespace EstudioDB.dao
 {
     internal class DaoUsuario
     {
-        public void insertarUsuario(Usuarios usuario)
+        public void insertarUsuario(Usuario usuario)
         {
             try
             {
-                string query = "INSERT INTO Usuarios (nombreUsuario, contraseña)" +
+                string query = "INSERT INTO Usuario (nombreUsuario, contraseña)" +
                                "VALUES (@nombreUsuario, @contraseña)";
                 Conexion objetoConexion = new Conexion();
                 MySqlCommand mySqlCommand = new MySqlCommand(query, objetoConexion.establecerConexion());
@@ -31,18 +31,18 @@ namespace EstudioDB.dao
             }
         }
 
-        public List<Usuarios> obtenerUsuarios()
+        public List<Usuario> obtenerUsuarios()
         {
-            List<Usuarios> listaUsuarios = new List<Usuarios>();
+            List<Usuario> listaUsuarios = new List<Usuario>();
             try
             {
-                string query = "SELECT * FROM Usuarios";
+                string query = "SELECT * FROM usuario";
                 Conexion objetoConexion = new Conexion();
                 MySqlCommand mySqlCommand = new MySqlCommand(query, objetoConexion.establecerConexion());
                 MySqlDataReader reader = mySqlCommand.ExecuteReader();
                 while (reader.Read())
                 {
-                    Usuarios usuario = new Usuarios(
+                    Usuario usuario = new Usuario(
                         reader.GetInt16(0),
                         reader.GetString(1),
                         reader.GetString(2)
@@ -61,12 +61,12 @@ namespace EstudioDB.dao
             return listaUsuarios;
         }
 
-        public void actualizarUsuario(int id, Usuarios usuario)
+        public void actualizarUsuario(int id, Usuario usuario)
         {
             try
             {
                 string query =
-                                "UPDATE usuarios set nombreUsuario = @nombreUsuario, contraseña = @contraseña where id = @id";
+                                "UPDATE usuario set nombreUsuario = @nombreUsuario, contraseña = @contraseña where id = @id";
                             Conexion objetoConexion = new Conexion();
                             MySqlCommand myCommand= new MySqlCommand(query, objetoConexion.establecerConexion());
                             myCommand.Parameters.AddWithValue("@nombreUsuario", usuario.nombreUsuario);
@@ -83,11 +83,11 @@ namespace EstudioDB.dao
             
         }
 
-        public void borrarUsuario(int id, Usuarios usuario)
+        public void borrarUsuario(int id, Usuario usuario)
         {
             try
             {
-                string query = "DELETE FROM Usuarios WHERE id = @id";
+                string query = "DELETE FROM usuario WHERE id = @id";
                 Conexion objetoConexion = new Conexion();
                 MySqlCommand myCommand = new MySqlCommand(query, objetoConexion.establecerConexion());
                 myCommand.Parameters.AddWithValue("@id", id);

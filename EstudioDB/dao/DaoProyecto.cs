@@ -9,21 +9,21 @@ using MySql.Data.MySqlClient;
 
 namespace EstudioDB.dao
 {
-    internal class DaoAsignatura
+    internal class DaoProyecto
     {
-        public void insertarAsignatura(Asignatura asignatura)
+        public void insertarProyecto(Proyecto proyecto)
         {
             try
             {
-                string query = "INSERT INTO asignaturas (nombreAsignatura) VALUES (@nombreAsignatura)";
+                string query = "INSERT INTO proyecto (nombreProyecto) VALUES (@nombreProyecto)";
 
                 Conexion objetoConexion = new Conexion();
 
                 MySqlCommand myCommand = new MySqlCommand(query, objetoConexion.establecerConexion());
-                myCommand.Parameters.AddWithValue("@nombreAsignatura", asignatura.nombreAsignaura);
+                myCommand.Parameters.AddWithValue("@nombreProyecto", proyecto.NombreProyecto);
 
                 MySqlDataReader reader = myCommand.ExecuteReader();
-                MessageBox.Show("Asignatura registrada correctamente.");
+                MessageBox.Show("Proyecto registrada correctamente.");
                 while (reader.Read())
                 {
                     objetoConexion.cerrarConexion();
@@ -31,18 +31,17 @@ namespace EstudioDB.dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No se pudo registrar la asignatura." + ex.ToString());
+                MessageBox.Show("No se pudo registrar la proyecto." + ex.ToString());
 
             }
 
         }
 
-        public List<Asignatura> obtenerAsignaturas()
+        public List<Proyecto> obtenerProyecto(List<Proyecto> listaProyecto)
         {
-            List<Asignatura> listaAsignaturas = new List<Asignatura>();
             try
             {
-                string query = "SELECT * FROM asignaturas";
+                string query = "SELECT * FROM proyecto";
 
                 Conexion objetoConexion = new Conexion();
 
@@ -52,11 +51,11 @@ namespace EstudioDB.dao
 
                 while (reader.Read())
                 {
-                    Asignatura asignatura = new Asignatura(
+                    Proyecto proyecto = new Proyecto(
                         reader.GetInt16(0),
                         reader.GetString(1)
                     );
-                    listaAsignaturas.Add(asignatura);
+                    listaProyecto.Add(proyecto);
                 }
 
                 reader.Close();
@@ -64,22 +63,22 @@ namespace EstudioDB.dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No se pudo obtener la lista de asignaturas." + ex.ToString());
+                MessageBox.Show("No se pudo obtener la lista de proyectos." + ex.ToString());
             }
 
-            return listaAsignaturas;
+            return listaProyecto;
         }
 
-        public void actualizarAsignatura(Asignatura asignatura)
+        public void actualizarProyectos(Proyecto proyecto)
         {
             try
             {
                 string query =
-                    "UPDATE asignaturas SET nombreAsignatura=@nombreAsignatura WHERE idAsignatura=@idAsignatura";
+                    "UPDATE proyecto SET nombreProyecto=@nombreProyecto WHERE idProyecto=@idProyecto";
                 Conexion objetoConexion = new Conexion();
                 MySqlCommand myCommand = new MySqlCommand(query, objetoConexion.establecerConexion());
-                myCommand.Parameters.AddWithValue("@nombreAsignatura", asignatura.nombreAsignaura);
-                myCommand.Parameters.AddWithValue("@idAsignatura", asignatura.asignaturaID);
+                myCommand.Parameters.AddWithValue("@nombreProyecto", proyecto.NombreProyecto);
+                myCommand.Parameters.AddWithValue("@idProyecto", proyecto.ProyectoId);
 
 
                 objetoConexion.cerrarConexion();
@@ -88,23 +87,23 @@ namespace EstudioDB.dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No se pudo actualizar la asignatura." + ex.ToString());
+                MessageBox.Show("No se pudo actualizar la proyecto." + ex.ToString());
             }
         }
 
-        public void eliminarAsignatura(int id, Asignatura asignatura)
+        public void eliminarProyecto(int id, Proyecto proyecto)
         {
             try
             {
-                string query = "DELETE FROM asignaturas WHERE idAsignatura=@idAsignatura";
+                string query = "DELETE FROM proyecto WHERE idProyecto=@idProyecto";
                 Conexion objetoConexion = new Conexion();
                 MySqlCommand myCommand = new MySqlCommand(query, objetoConexion.establecerConexion());
-                myCommand.Parameters.AddWithValue("@idAsignatura", id);
+                myCommand.Parameters.AddWithValue("@idProyecto", id);
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No se pudo eliminar la asignatura." + ex.ToString());
+                MessageBox.Show("No se pudo eliminar la proyecto." + ex.ToString());
             }
         }
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EstudioDB.dto
 {
-    internal class SesionesEstudio
+    internal class Sesion
     {
         public int sesionID { get; set; }
         public int asignaturaID { get; set; }
@@ -14,7 +14,7 @@ namespace EstudioDB.dto
         public int duracion { get; set; }
         public DateTime fecha { get; set; }
 
-        public SesionesEstudio(int sesionID, int asignaturaID, int usuarioID, int duracion, DateTime fecha)
+        public Sesion(int sesionID, int asignaturaID, int usuarioID, int duracion, DateTime fecha)
         {
             this.sesionID = sesionID;
             this.asignaturaID = asignaturaID;

@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace EstudioDB.dto
 {
-    internal class Usuarios
+    internal class Usuario
     {
         public int usuarioID { get; set; }
         public string nombreUsuario { get; set; }
         public string contraseña { get; set; }
 
-        public Usuarios(int usuarioID, string nombreUsuario, string contraseña)
+        public Usuario(int usuarioID, string nombreUsuario, string contraseña)
         {
             this.usuarioID = usuarioID;
             this.nombreUsuario = nombreUsuario;
