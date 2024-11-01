@@ -12,11 +12,15 @@ using System.Windows.Forms;
 using EstudioDB.dao;
 using EstudioDB.dto;
 using EstudioDB.Forms.FormsTimer;
+using System.Diagnostics;
 
 namespace EstudioDB.Forms
 {
     public partial class FrmTimer : Form
     {
+        //Cronometro:
+        private Stopwatch stopwatch;
+
         public FrmTimer()
         {
             InitializeComponent();
@@ -30,6 +34,9 @@ namespace EstudioDB.Forms
 
             this.Load += FrmTimer_Load;
             //Para el borde//
+
+            //Cronometro:
+            stopwatch = new Stopwatch();
         }
 
         public void cargarListaProyectos()
@@ -115,5 +122,38 @@ namespace EstudioDB.Forms
             }
         }
 
+        private void btnEmpezar_Click(object sender, EventArgs e)
+        {
+            stopwatch.Start();
+            Timer timer = new Timer();
+            timer.Interval = 1000; //1000 milliseconds = 1 second
+            timer.Tick += (s, args) =>
+            {
+                lblCronometro.Text = stopwatch.Elapsed.ToString(@"hh\:mm\:ss");
+            };
+            timer.Start();
+        }
+
+        private void btnPausar_Click(object sender, EventArgs e)
+        {
+            stopwatch.Stop();
+        }
+
+        private void btnFinalizar_Click(object sender, EventArgs e)
+        {
+            TimeSpan tiempoDedicado = stopwatch.Elapsed;
+
+            int idProyecto = Convert.ToInt16(guna2DataGridView1.SelectedRows[0].Cells["ProyectoId"].Value);
+            string nombreProyecto = guna2DataGridView1.SelectedRows[0].Cells["NombreProyecto"].Value.ToString();
+            int duracion = tiempoDedicado.Hours;
+            DateTime fecha = DateTime.Now;
+
+
+            DaoSesion daoSesion = new DaoSesion();
+            
+
+            MessageBox.Show($"Tiempo dedicado: {tiempoDedicado.Hours} horas, {tiempoDedicado.Minutes} minutos, {tiempoDedicado.Seconds} segundos");
+            stopwatch.Reset();
+        }
     }
 }

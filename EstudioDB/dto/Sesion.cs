@@ -22,6 +22,14 @@ namespace EstudioDB.dto
             this.duracion = duracion;
             this.fecha = fecha;
         }
+
+        public Sesion(int asignaturaId, int usuarioId, int duracion, DateTime fecha)
+        {
+            this.asignaturaID= asignaturaId;
+            this.usuarioID = usuarioId;
+            this.duracion = duracion;
+            this.fecha=fecha;
+        }
     }
 
 
