@@ -8,6 +8,8 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EstudioDB.dao;
+using EstudioDB.dto;
 
 namespace EstudioDB.Forms.FormsInicio
 {
@@ -32,12 +34,34 @@ namespace EstudioDB.Forms.FormsInicio
             }
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            dAO
+            DaoUsuario daoUsuario = new DaoUsuario();
+            List<Usuario> listaUsuarios = daoUsuario.obtenerUsuarios();
 
-            iniciarSesion?.Invoke(this,EventArgs.Empty);
-            this.Close();
+            String username = gunaTxtUsuario.Text;
+            String password = gunaTxtContraseña.Text;
+
+            // Buscar el usuario en la lista y si está, iniciar sesion, si no, usuario no existe o contraseña incorreta
+
+            Usuario usuarioEncontrado = listaUsuarios.FirstOrDefault(u => u.nombreUsuario == username);
+            if (usuarioEncontrado == null)
+            {
+                MessageBox.Show("El usuario no existe.");
+            }else if(usuarioEncontrado.contraseña!=password)
+
+            {
+                MessageBox.Show("Contraseña incorrecta.");
+            }
+            else
+            {
+                iniciarSesion?.Invoke(this, EventArgs.Empty);
+                this.Close();
+            }
+     
+
+
+            
         }
     }
 }

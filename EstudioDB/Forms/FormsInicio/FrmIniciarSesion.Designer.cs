@@ -33,7 +33,7 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ImageCheckBox1 = new Guna.UI2.WinForms.Guna2ImageCheckBox();
             this.gunaTxtContraseña = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnIniciarSesion = new Guna.UI2.WinForms.Guna2Button();
             this.gunaTxtUsuario = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblIniciarSesion = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
@@ -50,7 +50,7 @@
             this.guna2Panel1.BorderRadius = 22;
             this.guna2Panel1.Controls.Add(this.guna2ImageCheckBox1);
             this.guna2Panel1.Controls.Add(this.gunaTxtContraseña);
-            this.guna2Panel1.Controls.Add(this.guna2Button1);
+            this.guna2Panel1.Controls.Add(this.btnIniciarSesion);
             this.guna2Panel1.Controls.Add(this.gunaTxtUsuario);
             this.guna2Panel1.Controls.Add(this.lblIniciarSesion);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -107,26 +107,26 @@
             this.gunaTxtContraseña.Size = new System.Drawing.Size(331, 50);
             this.gunaTxtContraseña.TabIndex = 6;
             // 
-            // guna2Button1
+            // btnIniciarSesion
             // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(129)))), ((int)(((byte)(194)))));
-            this.guna2Button1.BorderRadius = 10;
-            this.guna2Button1.BorderThickness = 2;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(74, 421);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(331, 49);
-            this.guna2Button1.TabIndex = 5;
-            this.guna2Button1.Text = "Iniciar sesión";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.btnIniciarSesion.Animated = true;
+            this.btnIniciarSesion.BackColor = System.Drawing.Color.Transparent;
+            this.btnIniciarSesion.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(129)))), ((int)(((byte)(194)))));
+            this.btnIniciarSesion.BorderRadius = 10;
+            this.btnIniciarSesion.BorderThickness = 2;
+            this.btnIniciarSesion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnIniciarSesion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnIniciarSesion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnIniciarSesion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnIniciarSesion.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
+            this.btnIniciarSesion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnIniciarSesion.ForeColor = System.Drawing.Color.White;
+            this.btnIniciarSesion.Location = new System.Drawing.Point(74, 421);
+            this.btnIniciarSesion.Name = "btnIniciarSesion";
+            this.btnIniciarSesion.Size = new System.Drawing.Size(331, 49);
+            this.btnIniciarSesion.TabIndex = 5;
+            this.btnIniciarSesion.Text = "Iniciar sesión";
+            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
             // 
             // gunaTxtUsuario
             // 
@@ -188,7 +188,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2ImageCheckBox guna2ImageCheckBox1;
         private Guna.UI2.WinForms.Guna2TextBox gunaTxtContraseña;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnIniciarSesion;
         private Guna.UI2.WinForms.Guna2TextBox gunaTxtUsuario;
         private System.Windows.Forms.Label lblIniciarSesion;
     }
