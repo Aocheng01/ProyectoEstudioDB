@@ -102,12 +102,17 @@ namespace EstudioDB
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
-
+            
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             AbrirFormEnPanelTodo(new FrmAplicacionPrincipal());
+        }
+
+        private void gunaTxtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

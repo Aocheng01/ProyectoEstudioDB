@@ -16,5 +16,15 @@ namespace EstudioDB.Forms
         {
             InitializeComponent();
         }
+
+        private void FrmAplicacionPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelContenedorTodo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

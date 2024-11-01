@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblRegistrar = new System.Windows.Forms.Label();
             this.gunaTxtUsuario = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
@@ -35,6 +36,7 @@
             this.guna2ImageCheckBox1 = new Guna.UI2.WinForms.Guna2ImageCheckBox();
             this.gunaTxtRepetirContraseña = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,7 +46,7 @@
             this.lblRegistrar.BackColor = System.Drawing.Color.Transparent;
             this.lblRegistrar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegistrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(129)))), ((int)(((byte)(194)))));
-            this.lblRegistrar.Location = new System.Drawing.Point(178, 163);
+            this.lblRegistrar.Location = new System.Drawing.Point(189, 176);
             this.lblRegistrar.Name = "lblRegistrar";
             this.lblRegistrar.Size = new System.Drawing.Size(100, 30);
             this.lblRegistrar.TabIndex = 2;
@@ -54,7 +56,7 @@
             // 
             this.gunaTxtUsuario.Animated = true;
             this.gunaTxtUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.gunaTxtUsuario.BorderColor = System.Drawing.Color.White;
+            this.gunaTxtUsuario.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(146)))));
             this.gunaTxtUsuario.BorderRadius = 8;
             this.gunaTxtUsuario.BorderThickness = 2;
             this.gunaTxtUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -63,11 +65,12 @@
             this.gunaTxtUsuario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.gunaTxtUsuario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.gunaTxtUsuario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.gunaTxtUsuario.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(207)))), ((int)(((byte)(226)))));
             this.gunaTxtUsuario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.gunaTxtUsuario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.gunaTxtUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(129)))), ((int)(((byte)(194)))));
             this.gunaTxtUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.gunaTxtUsuario.Location = new System.Drawing.Point(78, 263);
+            this.gunaTxtUsuario.Location = new System.Drawing.Point(76, 268);
             this.gunaTxtUsuario.Name = "gunaTxtUsuario";
             this.gunaTxtUsuario.PasswordChar = '\0';
             this.gunaTxtUsuario.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(129)))), ((int)(((byte)(194)))));
@@ -89,7 +92,7 @@
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(78, 472);
+            this.guna2Button1.Location = new System.Drawing.Point(76, 477);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(331, 49);
             this.guna2Button1.TabIndex = 5;
@@ -100,7 +103,7 @@
             // 
             this.gunaTxtContraseña.Animated = true;
             this.gunaTxtContraseña.BackColor = System.Drawing.Color.Transparent;
-            this.gunaTxtContraseña.BorderColor = System.Drawing.Color.White;
+            this.gunaTxtContraseña.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(146)))));
             this.gunaTxtContraseña.BorderRadius = 8;
             this.gunaTxtContraseña.BorderThickness = 2;
             this.gunaTxtContraseña.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -109,12 +112,13 @@
             this.gunaTxtContraseña.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.gunaTxtContraseña.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.gunaTxtContraseña.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.gunaTxtContraseña.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(207)))), ((int)(((byte)(226)))));
             this.gunaTxtContraseña.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.gunaTxtContraseña.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.gunaTxtContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(129)))), ((int)(((byte)(194)))));
             this.gunaTxtContraseña.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.gunaTxtContraseña.IconRightOffset = new System.Drawing.Point(8, 0);
-            this.gunaTxtContraseña.Location = new System.Drawing.Point(78, 334);
+            this.gunaTxtContraseña.Location = new System.Drawing.Point(76, 339);
             this.gunaTxtContraseña.Name = "gunaTxtContraseña";
             this.gunaTxtContraseña.PasswordChar = '*';
             this.gunaTxtContraseña.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(129)))), ((int)(((byte)(194)))));
@@ -133,7 +137,7 @@
             this.guna2ImageCheckBox1.ImageRotate = 0F;
             this.guna2ImageCheckBox1.ImageSize = new System.Drawing.Size(30, 30);
             this.guna2ImageCheckBox1.IndicateFocus = true;
-            this.guna2ImageCheckBox1.Location = new System.Drawing.Point(365, 343);
+            this.guna2ImageCheckBox1.Location = new System.Drawing.Point(363, 348);
             this.guna2ImageCheckBox1.Name = "guna2ImageCheckBox1";
             this.guna2ImageCheckBox1.Size = new System.Drawing.Size(35, 29);
             this.guna2ImageCheckBox1.TabIndex = 8;
@@ -144,7 +148,7 @@
             // 
             this.gunaTxtRepetirContraseña.Animated = true;
             this.gunaTxtRepetirContraseña.BackColor = System.Drawing.Color.Transparent;
-            this.gunaTxtRepetirContraseña.BorderColor = System.Drawing.Color.White;
+            this.gunaTxtRepetirContraseña.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(99)))), ((int)(((byte)(146)))));
             this.gunaTxtRepetirContraseña.BorderRadius = 8;
             this.gunaTxtRepetirContraseña.BorderThickness = 2;
             this.gunaTxtRepetirContraseña.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -153,12 +157,13 @@
             this.gunaTxtRepetirContraseña.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.gunaTxtRepetirContraseña.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.gunaTxtRepetirContraseña.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.gunaTxtRepetirContraseña.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(207)))), ((int)(((byte)(226)))));
             this.gunaTxtRepetirContraseña.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.gunaTxtRepetirContraseña.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.gunaTxtRepetirContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(129)))), ((int)(((byte)(194)))));
             this.gunaTxtRepetirContraseña.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.gunaTxtRepetirContraseña.IconRightOffset = new System.Drawing.Point(8, 0);
-            this.gunaTxtRepetirContraseña.Location = new System.Drawing.Point(78, 390);
+            this.gunaTxtRepetirContraseña.Location = new System.Drawing.Point(76, 395);
             this.gunaTxtRepetirContraseña.Name = "gunaTxtRepetirContraseña";
             this.gunaTxtRepetirContraseña.PasswordChar = '*';
             this.gunaTxtRepetirContraseña.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(129)))), ((int)(((byte)(194)))));
@@ -169,6 +174,7 @@
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BorderRadius = 22;
             this.guna2Panel1.Controls.Add(this.gunaTxtRepetirContraseña);
             this.guna2Panel1.Controls.Add(this.guna2ImageCheckBox1);
@@ -177,19 +183,30 @@
             this.guna2Panel1.Controls.Add(this.gunaTxtUsuario);
             this.guna2Panel1.Controls.Add(this.lblRegistrar);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
+            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(121)))));
             this.guna2Panel1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.ShadowDecoration.BorderRadius = 30;
+            this.guna2Panel1.ShadowDecoration.Enabled = true;
             this.guna2Panel1.Size = new System.Drawing.Size(473, 694);
             this.guna2Panel1.TabIndex = 1;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
+            // 
+            // guna2BorderlessForm1
+            // 
+            this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockIndicatorColor = System.Drawing.Color.Transparent;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.ShadowColor = System.Drawing.Color.Transparent;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
             // FrmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(45)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(473, 694);
             this.Controls.Add(this.guna2Panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -211,5 +228,6 @@
         private Guna.UI2.WinForms.Guna2ImageCheckBox guna2ImageCheckBox1;
         private Guna.UI2.WinForms.Guna2TextBox gunaTxtRepetirContraseña;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
     }
 }
