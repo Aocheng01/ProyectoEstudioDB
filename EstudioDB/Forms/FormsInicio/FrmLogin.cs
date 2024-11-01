@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using EstudioDB.Forms;
+using EstudioDB.Forms.FormsInicio;
 using Org.BouncyCastle.Asn1.X509;
 
 namespace EstudioDB
@@ -17,6 +18,8 @@ namespace EstudioDB
         public FrmLogin()
         {
             InitializeComponent();
+     
+
         }
         private void AbrirFormEnPanel(object formhija)
         {
@@ -34,18 +37,12 @@ namespace EstudioDB
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            FrmIniciarSesion formIniciarSesion = new FrmIniciarSesion();
+            formIniciarSesion.iniciarSesion += (s, ev) => AbrirFormEnPanelTodo(new FrmAplicacionPrincipal());
+            AbrirFormEnPanel(formIniciarSesion);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void guna2ImageButton1_Click(object sender, EventArgs e)
         {
@@ -65,19 +62,6 @@ namespace EstudioDB
 
 
 
-        private void guna2ImageCheckBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            bool checkedState = guna2ImageCheckBox1.Checked;
-            if (checkedState)
-            {
-                gunaTxtContraseña.PasswordChar = '\0';
-            }
-            else
-            {
-                gunaTxtContraseña.PasswordChar = '*';
-            }
-            
-        }
         private void AbrirFormEnPanelTodo(object formhija)
         {
             if (this.panelContenedorTodo.Controls.Count > 0)
@@ -95,15 +79,16 @@ namespace EstudioDB
         }
 
 
+
         private void label1_Click(object sender, EventArgs e)
         {
+            if (this.panelContenedorLoginRegister.Controls.Count > 0)
+                this.panelContenedorLoginRegister.Controls.RemoveAt(0); // Limpia el panel
+
             AbrirFormEnPanel(new FrmRegister());
         }
 
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
+
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
@@ -111,17 +96,12 @@ namespace EstudioDB
 
         }
 
-        private void gunaTxtUsuario_TextChanged(object sender, EventArgs e)
+        private void abrirPrincipal(object sender, EventArgs e)
         {
-
+            AbrirFormEnPanelTodo(new FrmAplicacionPrincipal());
         }
 
-        private void gunaImgBtnCerrar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2PanelTitulo2_Paint(object sender, PaintEventArgs e)
+        private void panelContenedorLoginRegister_Paint(object sender, PaintEventArgs e)
         {
 
         }

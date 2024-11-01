@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EstudioDB.dao;
+using EstudioDB.dto;
 
 namespace EstudioDB.Forms
 {
@@ -37,10 +39,23 @@ namespace EstudioDB.Forms
             {
                 MessageBox.Show("Las contraseñas no coinciden", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else
+            {
+                DaoUsuario daoUsuario = new DaoUsuario();
+                Usuario usuario = new Usuario(gunaTxtUsuario.Text,gunaTxtContraseña.Text);
+
+                daoUsuario.insertarUsuario(usuario);
+                this.Close();
+
+
+            }
+
         }
 
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
+            this.Close();
 
         }
     }

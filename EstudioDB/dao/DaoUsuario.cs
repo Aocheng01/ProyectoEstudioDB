@@ -25,9 +25,17 @@ namespace EstudioDB.dao
                 MySqlDataReader reader = mySqlCommand.ExecuteReader();
                 MessageBox.Show("Usuario registrado correctamente.");
             }
-            catch (Exception e)
+            catch (MySqlException ex)
             {
-                MessageBox.Show("Error al insertar ususario" + e.ToString());
+                if (ex.Number == 1062)
+                {
+                    MessageBox.Show("Ya existe un usuario con ese nombre. Por favor, elige otro nombre.");
+                }
+                else
+                {
+                    MessageBox.Show("Ocurrio un error al registrar el usuario.");
+                }
+                
             }
         }
 

@@ -18,5 +18,11 @@ namespace EstudioDB.dto
             this.nombreUsuario = nombreUsuario;
             this.contraseña = contraseña;
         }
+
+        public Usuario( string nombreUsuario, string contraseña)
+        {
+            this.nombreUsuario = nombreUsuario;
+            this.contraseña = contraseña;
+        }
     }
 }

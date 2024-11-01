@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.btnAñadir = new Guna.UI2.WinForms.Guna2Button();
             this.lblElegirTarea = new System.Windows.Forms.Label();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnFinalizar = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnPausar = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnEmpezar = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblCronometro = new System.Windows.Forms.Label();
             this.btnEliminarTarea = new Guna.UI2.WinForms.Guna2Button();
             this.panelGridView = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnFinalizar = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.btnPausar = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.btnEmpezar = new Guna.UI2.WinForms.Guna2ImageButton();
             this.daoProyectoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -89,27 +89,27 @@
             // 
             // guna2DataGridView1
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.guna2DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.guna2DataGridView1.ColumnHeadersHeight = 25;
             this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.Location = new System.Drawing.Point(0, 0);
@@ -138,7 +138,6 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 22;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.guna2DataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellContentClick);
             // 
             // guna2Panel1
             // 
@@ -155,6 +154,51 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1197, 753);
             this.guna2Panel1.TabIndex = 7;
+            // 
+            // btnFinalizar
+            // 
+            this.btnFinalizar.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnFinalizar.HoverState.Image = global::EstudioDB.Properties.Resources.stop_30dp_5985E1_FILL0_wght400_GRAD0_opsz24;
+            this.btnFinalizar.HoverState.ImageSize = new System.Drawing.Size(67, 67);
+            this.btnFinalizar.Image = global::EstudioDB.Properties.Resources.stop_30dp_5985E1_FILL0_wght400_GRAD0_opsz24;
+            this.btnFinalizar.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnFinalizar.ImageRotate = 0F;
+            this.btnFinalizar.Location = new System.Drawing.Point(520, 463);
+            this.btnFinalizar.Name = "btnFinalizar";
+            this.btnFinalizar.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnFinalizar.Size = new System.Drawing.Size(77, 61);
+            this.btnFinalizar.TabIndex = 12;
+            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
+            // 
+            // btnPausar
+            // 
+            this.btnPausar.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnPausar.HoverState.Image = global::EstudioDB.Properties.Resources.pause_30dp_5985E1_FILL0_wght400_GRAD0_opsz24;
+            this.btnPausar.HoverState.ImageSize = new System.Drawing.Size(67, 67);
+            this.btnPausar.Image = global::EstudioDB.Properties.Resources.pause_30dp_5985E1_FILL0_wght400_GRAD0_opsz24;
+            this.btnPausar.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnPausar.ImageRotate = 0F;
+            this.btnPausar.Location = new System.Drawing.Point(367, 463);
+            this.btnPausar.Name = "btnPausar";
+            this.btnPausar.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnPausar.Size = new System.Drawing.Size(78, 61);
+            this.btnPausar.TabIndex = 11;
+            this.btnPausar.Click += new System.EventHandler(this.btnPausar_Click);
+            // 
+            // btnEmpezar
+            // 
+            this.btnEmpezar.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnEmpezar.HoverState.Image = global::EstudioDB.Properties.Resources.play_arrow_30dp_5985E1_FILL0_wght400_GRAD0_opsz24;
+            this.btnEmpezar.HoverState.ImageSize = new System.Drawing.Size(67, 67);
+            this.btnEmpezar.Image = global::EstudioDB.Properties.Resources.play_arrow_30dp_5985E1_FILL0_wght400_GRAD0_opsz24;
+            this.btnEmpezar.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnEmpezar.ImageRotate = 0F;
+            this.btnEmpezar.Location = new System.Drawing.Point(225, 463);
+            this.btnEmpezar.Name = "btnEmpezar";
+            this.btnEmpezar.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnEmpezar.Size = new System.Drawing.Size(85, 64);
+            this.btnEmpezar.TabIndex = 10;
+            this.btnEmpezar.Click += new System.EventHandler(this.btnEmpezar_Click);
             // 
             // guna2ShadowPanel1
             // 
@@ -205,51 +249,6 @@
             this.panelGridView.ShadowDecoration.Enabled = true;
             this.panelGridView.Size = new System.Drawing.Size(310, 636);
             this.panelGridView.TabIndex = 7;
-            // 
-            // btnFinalizar
-            // 
-            this.btnFinalizar.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnFinalizar.HoverState.Image = global::EstudioDB.Properties.Resources.stop_30dp_5985E1_FILL0_wght400_GRAD0_opsz24;
-            this.btnFinalizar.HoverState.ImageSize = new System.Drawing.Size(67, 67);
-            this.btnFinalizar.Image = global::EstudioDB.Properties.Resources.stop_30dp_5985E1_FILL0_wght400_GRAD0_opsz24;
-            this.btnFinalizar.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnFinalizar.ImageRotate = 0F;
-            this.btnFinalizar.Location = new System.Drawing.Point(520, 463);
-            this.btnFinalizar.Name = "btnFinalizar";
-            this.btnFinalizar.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnFinalizar.Size = new System.Drawing.Size(77, 61);
-            this.btnFinalizar.TabIndex = 12;
-            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
-            // 
-            // btnPausar
-            // 
-            this.btnPausar.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnPausar.HoverState.Image = global::EstudioDB.Properties.Resources.pause_30dp_5985E1_FILL0_wght400_GRAD0_opsz24;
-            this.btnPausar.HoverState.ImageSize = new System.Drawing.Size(67, 67);
-            this.btnPausar.Image = global::EstudioDB.Properties.Resources.pause_30dp_5985E1_FILL0_wght400_GRAD0_opsz24;
-            this.btnPausar.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnPausar.ImageRotate = 0F;
-            this.btnPausar.Location = new System.Drawing.Point(367, 463);
-            this.btnPausar.Name = "btnPausar";
-            this.btnPausar.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnPausar.Size = new System.Drawing.Size(78, 61);
-            this.btnPausar.TabIndex = 11;
-            this.btnPausar.Click += new System.EventHandler(this.btnPausar_Click);
-            // 
-            // btnEmpezar
-            // 
-            this.btnEmpezar.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnEmpezar.HoverState.Image = global::EstudioDB.Properties.Resources.play_arrow_30dp_5985E1_FILL0_wght400_GRAD0_opsz24;
-            this.btnEmpezar.HoverState.ImageSize = new System.Drawing.Size(67, 67);
-            this.btnEmpezar.Image = global::EstudioDB.Properties.Resources.play_arrow_30dp_5985E1_FILL0_wght400_GRAD0_opsz24;
-            this.btnEmpezar.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnEmpezar.ImageRotate = 0F;
-            this.btnEmpezar.Location = new System.Drawing.Point(225, 463);
-            this.btnEmpezar.Name = "btnEmpezar";
-            this.btnEmpezar.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnEmpezar.Size = new System.Drawing.Size(85, 64);
-            this.btnEmpezar.TabIndex = 10;
-            this.btnEmpezar.Click += new System.EventHandler(this.btnEmpezar_Click);
             // 
             // daoProyectoBindingSource
             // 

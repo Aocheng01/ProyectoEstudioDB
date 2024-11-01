@@ -93,10 +93,7 @@ namespace EstudioDB.Forms
             }
         }
 
-        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+   
 
         private void btnEliminarTarea_Click(object sender, EventArgs e)
         {

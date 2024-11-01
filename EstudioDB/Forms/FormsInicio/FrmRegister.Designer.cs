@@ -37,6 +37,7 @@
             this.gunaTxtRepetirContraseña = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.btnCancelar = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,7 +95,7 @@
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.Location = new System.Drawing.Point(76, 477);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(331, 49);
+            this.guna2Button1.Size = new System.Drawing.Size(181, 49);
             this.guna2Button1.TabIndex = 5;
             this.guna2Button1.Text = "Registrar";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -174,6 +175,7 @@
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BorderRadius = 22;
+            this.guna2Panel1.Controls.Add(this.btnCancelar);
             this.guna2Panel1.Controls.Add(this.gunaTxtRepetirContraseña);
             this.guna2Panel1.Controls.Add(this.guna2ImageCheckBox1);
             this.guna2Panel1.Controls.Add(this.gunaTxtContraseña);
@@ -189,7 +191,6 @@
             this.guna2Panel1.ShadowDecoration.BorderRadius = 30;
             this.guna2Panel1.Size = new System.Drawing.Size(473, 694);
             this.guna2Panel1.TabIndex = 1;
-            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // guna2BorderlessForm1
             // 
@@ -198,6 +199,27 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.ShadowColor = System.Drawing.Color.Transparent;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Animated = true;
+            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(129)))), ((int)(((byte)(194)))));
+            this.btnCancelar.BorderRadius = 10;
+            this.btnCancelar.BorderThickness = 2;
+            this.btnCancelar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancelar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancelar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCancelar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCancelar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(131)))), ((int)(((byte)(187)))));
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(273, 478);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(134, 48);
+            this.btnCancelar.TabIndex = 10;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // FrmRegister
             // 
@@ -226,5 +248,6 @@
         private Guna.UI2.WinForms.Guna2TextBox gunaTxtRepetirContraseña;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private Guna.UI2.WinForms.Guna2Button btnCancelar;
     }
 }
